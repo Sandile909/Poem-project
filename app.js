@@ -16,7 +16,7 @@ redirectTo: '/'
 mainApp.controller('mainCtrl', ['$scope', '$location', '$http', '$interval', function($scope, $location, $http, $interval){
 //defaults
 $interval(function(){
-$http.get('https://poem-community.onrender.com/i poems').then(function(response){
+$http.get('https://poem-community.onrender.com/poems').then(function(response){
 $scope.poems = response.data
 }).catch(function(error){
 console.log('getting poems error: ' + error)
