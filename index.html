@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poem Community</title>
+<link rel="shortcut icon" href="main.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-animate.min.js"></script>
+<script src="/app.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="mainCtrl">
+<header ng-include="'header.html'"></header>
+<main ng-view></main>
+
+<dialog class="sideBar">
+<h2 ng-click="sideBarClose()">X</h2>
+<div>
+<h3 ng-click="homePage()">- Home</h3>
+<h3 ng-click="adminPage()">- Add Poems</h3>
+<h3 ng-click="developer()">- Contact Developer</h3>
+</div>
+</dialog>
+</body>
+</html>

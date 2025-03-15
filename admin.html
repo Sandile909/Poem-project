@@ -1,0 +1,68 @@
+<div class="welcomeUser" ng-show="forms">
+<div ng-click="signupPage()">
+<img src="profile.jpg" alt="profile">
+<p ng-click="signupPage()">Click here to Sign up now!</p>
+</div>
+
+<div ng-click="loginPage()">
+<img src="profile.jpg" alt="profile">
+<p ng-click="loginPage()">Click here to Sign In now!</p>
+</div>
+
+<div ng-click="forgotPassword()">
+<img src="profile.jpg" alt="profile">
+<p ng-click="forgotPassword()()">Click here if you forgot your password!</p>
+</div>
+</div>
+
+<!-- login form -->
+<form class="loginForm" ng-submit="loginFormSubmit()" ng-show="showLoginForm">
+<h3>Login Form</h3>
+<div>
+<input type="text" class="loginUsername" name="loginUsername" ng-model="loginData.username" placeholder="Username" minlength="3" required>
+
+<input type="email" class="loginEmail" name="loginEmail" ng-model="loginData.email" placeholder="Email" minlength="3" required>
+
+<input type="password" class="loginPassword" name="loginPassword" ng-model="loginData.password" placeholder="Password" minlength="3" required>
+
+<input type="submit" class="loginSubmit" value="Submit">
+<p ng-show="loginError">{{loginErrorMsg}}</p>
+</div>
+</form>
+
+<!-- signup form -->
+<form class="signupForm" ng-submit="signupFormSubmit()" ng-show="showSignupForm">
+<h3>Signup Form</h3>
+<div>
+<input type="text" class="signupUsername" name="signupUsername" ng-model="signupData.username" placeholder="Username" minlength="3" required>
+
+<input type="email" class="signupEmail" name="signupEmail" ng-model="signupData.email" placeholder="Email" minlength="3" required>
+
+<input type="password" class="signupPassword" name="signupPassword" ng-model="signupData.password" placeholder="Password" minlength="3" required>
+
+<input type="submit" value="Submit">
+</div>
+</form>
+
+<!-- Poem form -->
+<form class="poemForm" ng-submit="poemFormSubmit()" ng-show="showPoemForm">
+<h3>Write your poem</h3>
+<div>
+<input type="text" class="poemTitle" name="poemTitle" ng-model="poemData.title" placeholder="Title: " minlength="3" required>
+
+<textarea type="text" class="poemPoem" name="poemPoem" ng-model="poemData.poem" placeholder="Poem: " minlength="10" rows="25" required></textarea>
+
+<input type="text" class="poemAuthor" name="poemAuthor" ng-model="poemData.author" placeholder="Author: " minlength="3" required>
+
+<input type="submit" class="signupSubmit" value="Submit">
+</div>
+</form>
+
+<!-- forgot password -->
+<form class="passwordForm" ng-submit="passwordFormSubmit()" ng-show="showPasswordForm">
+<div>
+<h3>Enter your email address to get your password!</h3>
+<input type="email" ng-model="forgotPasswordData.email" placeholder="Enter email address" required>
+<input type="submit" value="Submit">
+</div>
+</form>

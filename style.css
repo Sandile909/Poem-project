@@ -1,0 +1,244 @@
+*{
+box-sizing: border-box;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin: 0;
+padding: 0;
+border: none;
+outline: none;
+}
+button, img{
+cursor: pointer;
+transition: 0.3s;
+}
+header{
+display: flex;
+padding: 2%;
+justify-content: space-between;
+box-shadow: 0 0 5px darkgray;
+}
+header h2{
+color: white;
+text-shadow: 1.5px 2px dodgerblue;
+}
+header button{
+background: transparent;
+color: black;
+transform: rotate(90deg);
+font-size: 1.5rem;
+}
+main{
+margin: 0 auto;
+}
+main.ng-enter{
+opacity: 0.1;
+transition: opacity 3s;
+}
+main.ng-enter-active{
+opacity: 1;
+}
+.welcomeUser{
+width: 80%;
+margin: 0 auto;
+margin-top: 5%;
+padding: 2%;
+display: flex;
+overflow: hidden;
+border: 2px solid black;
+border-radius: 5px;
+gap: 2em;
+}
+@media screen and (min-width: 1440px){
+.welcomeUser{
+border: none;
+}
+}
+.welcomeUser div{
+display: flex;
+flex-direction: column;
+flex: 1 1 50%;
+gap: 0.5rem;
+text-align: center;
+}
+.welcomeUser div img{
+margin: 0 auto;
+width: 40%;
+border-radius: 10rem;
+}
+.welcomeUser div p{
+color: dodgerblue;
+cursor: pointer;
+}
+.loginForm, .signupForm, .poemForm, .passwordForm{
+margin: 0 auto;
+width: 70%;
+margin-top: 5%;
+box-shadow: 0 0 4px dodgerblue;
+padding: 3% 1.5%;
+border-radius: 5px;
+}
+.loginForm div, .signupForm div, .poemForm div, .passwordForm div{
+display: flex;
+flex-direction: column;
+gap: 1em;
+padding: 4% 0;
+}
+.loginForm div input, .signupForm div input, .poemForm div input, .poemForm div textarea, .passwordForm input{
+padding: 2% 1%;
+border-radius: 3px;
+border-bottom: 2px solid black;
+}
+/*.loginForm div input:last-of-type, .signupForm div input:last-of-type, .poemForm div input;last-of-type, .passwordForm input:last-of-type{
+background: dodgerblue;
+cursor: pointer;
+}*/
+.loginForm.ng-hide{
+opacity: 0;
+}
+.loginForm.ng-hide-remove{
+transition: 3s ease-in;
+transition: opacity 3s;
+opacity: 0.1;
+}
+.loginForm.ng-hide-remove.ng-hide-remove-active{
+transition: 3s ease-in;
+transition: opacity 3s;
+opacity: 1;
+}
+.signupForm.ng-hide{
+opacity: 0;
+}
+.signupForm.ng-hide-remove{
+transition: 3s ease;
+opacity: 0.1;
+}
+.signupForm.ng-hide-remove.ng-hide-remove-active{
+transition: 3s ease-in;
+transition: opacity 2s;
+opacity: 1;
+}
+.poemForm.ng-hide{
+opacity: 0;
+}
+.poemForm.ng-hide-remove{
+transition: 3s ease-in;
+transition: opacity 3s;
+opacity: 0.1;
+}
+.poemForm.ng-hide-remove.ng-hide-remove-active{
+transition: 3s ease-in;
+transition: opacity 3s;
+opacity: 1;
+}
+.passwordForm.ng-hide{
+opacity: 0;
+}
+.passwordForm.ng-hide-remove{
+transition: 3s ease-in;
+transition: opacity 3s;
+opacity: 0.1;
+}
+.passwordForm.ng-hide-remove.ng-hide-remove-active{
+transition: 3s ease-in;
+transition: opacity 3s;
+opacity: 1;
+}
+.poems{
+margin: 0 auto;
+margin-top: 4%;
+margin-bottom: 5%;
+width: 95%;
+}
+.poems > *{
+list-style: none;
+}
+.poems ul{
+margin-top: 3%;
+margin-bottom: 3%;
+display: grid;
+grid-template-columns: repeat(auto-fill, 48%);
+gap: 1em;
+}
+@media screen and (max-width: 320px){
+.poems ul{
+grid-template-columns: repeat(auto-fill, 100%);
+}
+}
+@media screen and (max-width: 435px){
+.poems ul{
+grid-template-columns: repeat(auto-fill, 100%);
+}
+}
+@media screen and (min-width: 1024px){
+.poems ul{
+grid-template-columns: repeat(auto-fill, 32%);
+}
+}
+@media screen and (min-width: 2560px){
+.poems ul{
+grid-template-columns: repeat(auto-fill, 16%);
+}
+}
+.poems li{
+background: url('1.jpg') repeat;
+background-size: 100%;
+border-radius: 6px;
+padding: 0 0 0 3%;
+box-shadow: 0 0 3px dodgerblue;
+}
+.poems li h3{
+padding: 3% 0;
+color: dodgerblue;
+}
+.poems li h3 u{
+color: white;
+}
+.poems li p{
+color: white;
+}
+.poems li p:first-of-type{
+backdrop-filter: blur(10px);
+}
+.poems li p:last-of-type{
+padding: 3% 0;
+}
+.poems li p i{
+color: white;
+}
+.sideBar{
+width: 50%;
+height: 100vh;
+background: white;
+/*background: url('1.jpg') repeat 200%;*/
+margin-left: 50%;
+padding: 5% 3%;
+border-radius: 4px;
+box-shadow: 0 0 4px black;
+animation: 2s sideBar ease-in;
+}
+@keyframes sideBar{
+from{
+margin-left: 100%;
+}
+}
+.sideBar h2{
+color: red;
+transition: 0.5s ease;
+cursor: pointer;
+}
+.sideBar h2:active, .sideBar h2:hover{
+color: dodgerblue;
+}
+.sideBar div{
+margin-top: 6%;
+padding: 0 4%;
+display: flex;
+flex-direction: column;
+gap: 0.4rem;
+}
+.sideBar div h3{
+cursor: pointer;
+transition: 1s ease;
+}
+.sideBar div h3:hover, .sideBar div h3:active{
+color: dodgerblue;
+}
