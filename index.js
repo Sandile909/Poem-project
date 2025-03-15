@@ -66,7 +66,7 @@ res.send({message: 'Poem post successful'})
 })
 });
 
-app.post('/send-email', (req, res) => {
+/*app.post('/send-email', (req, res) => {
 const transporter = nodemailer.createTransport({
 service: 'gmail',
 auth: {
@@ -91,7 +91,7 @@ console.log('Email sent successfully!');
 res.send({ message: 'Email sent successfully' });
 }
 });
-});
+});*/
 
 app.listen(port, () =>{
 console.log('Server running')
