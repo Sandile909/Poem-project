@@ -149,7 +149,8 @@ $scope.forms = false;
 }
 
 $scope.passwordFormSubmit = function() {
-$http.get('https://poem-community.onrender.com/users').then(function(response) {
+alert('Coming soon')
+/*$http.get('https://poem-community.onrender.com/users').then(function(response) {
 $scope.users = response.data;
 const user = $scope.users.find((user) => user.email === $scope.forgotPasswordData.email);
 if (user) {
@@ -172,7 +173,7 @@ alert('Email not found!');
 }
 }).catch(function(error) {
 console.log('getting users error: ' + error);
-});
+});*/
 };
 //end of forms
 
